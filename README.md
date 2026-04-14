@@ -17,7 +17,7 @@ This project is part of the pre-work I am completing through modules primarily f
 This project follows a lesson from **[The Odin Project](https://www.theodinproject.com/about)**.
 
 **Lesson:**
-[Lesson Name](LESSON_URL_HERE)
+[Tic-Tac-Toe](https://www.theodinproject.com/lessons/ruby-tic-tac-toe)
 
 The Odin Project provides a comprehensive open-source curriculum focused on learning web development through hands-on project building.
 
@@ -25,30 +25,16 @@ The Odin Project provides a comprehensive open-source curriculum focused on lear
 
 # Project Overview
 
-* Structuring HTML pages
-* Practicing CSS styling
-* Writing basic JavaScript
-* Understanding developer workflows
-* Learning Git version control
+* Ruby workflows
+* Ruby file management
 
 ---
 
 # Skills Practiced
 
-* HTML
-* CSS
-* JavaScript
-* Git
-* GitHub
-* Debugging
-* Problem solving
-* Developer workflow
-
----
-
-# Live Preview
-
-Example: []()
+* Ruby Classes
+* Ruby Methods
+* Recurision (bonus 😉)
 
 ---
 
@@ -57,16 +43,21 @@ Example: []()
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/project-name.git
+git clone https://github.com/Silas-N-Schlax/rm-prework-odin-tic-tac-toe.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd project-name
+cd rm-prework-odin-tic-tac-toe
 ```
 
-Open `index.html` in your browser.
+(optional for RuboCop)
+```bash
+bundle install
+```
+
+Run `ruby main.rb` in your terminal.
 
 ---
 
@@ -74,21 +65,14 @@ Open `index.html` in your browser.
 
 Key things learned from building this project:
 
-*
-*
-*
+* I didn't know how to code .
+* Good small chuncks of good is helpful when coming back later.
+* There are a lot of ways to do things, just not all are right.
 
 Things I would improve in a future iteration:
 
-*
-*
-*
-
----
-
-# Commit Philosophy
-
-This repository follows a workflow of **small, descriptive commits** to document the development process and learning progression. I aim to practice **atomic commits** whenever possible so that each commit reflects a clear and focused change.
+* Better interface.
+* Bot to play against.
 
 ---
 
