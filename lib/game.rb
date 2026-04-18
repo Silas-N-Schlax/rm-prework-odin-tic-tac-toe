@@ -4,10 +4,13 @@ require_relative "players"
 class Game
   attr_accessor :player1, :player2, :cat_score
 
-  def initialize
-    @takenspaces = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  def initialize(player1 = Players.new(nil, nil), player2 = Players.new(nil, nil), takenspaces = nil)
+    @takenspaces = takenspaces || [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     @player_turn = ""
     @players_created = false
+    @player1 = player1
+    @player2 = player2
+    @cat_score = 0
   end
 
   def new_round
@@ -66,7 +69,6 @@ class Game
   end
 
   def user_input(msg = " please enter where you want to go... (1-9)")
-    p @takenspaces
     puts @player_turn + msg
     user_input = gets.chomp.to_i
     user_input = user_input(" please enter a valid input (1-9), that is not taken...") if
@@ -104,7 +106,7 @@ class Game
       true
     elsif @takenspaces.none?(" ")
       @cat_score += 1
-      winner("cat")
+      winner("Cat")
       true
     else
       false
