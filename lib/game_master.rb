@@ -9,11 +9,10 @@ class GameMaster
   end
 
   def master_controls
-    puts "Please enter a key word to continue (type help for key words)"
+    puts "Please enter a key word to continue (type (h) for key words)"
     keyword = gets.chomp.downcase
     call_method(keyword)
     master_controls if keyword != "e"
-    puts "Thank you for playing!\nexitting..."
   end
 
   def call_method(key)
@@ -36,7 +35,7 @@ class GameMaster
     - New Game (g)
     - New Round (r)
     - Exit (e)
-    - Soreboard (s)
+    - Scoreboard (s)
     - Help (h)
     ---------------------
     "
@@ -47,13 +46,14 @@ class GameMaster
   end
 
   def new_game
-    puts "Use 'new game (n)' to keep current scores, otherwise type 'y'"
-    puts "canceling..." if gets.chomp != "y"
+    puts "Use 'new round (r)' to keep current scores, otherwise type 'y'"
+    return puts "canceling..." if gets.chomp != "y"
+
     tic_tac_toe.new_game
   end
 
   def scoreboard
-    tic_tac_toe.player1.nil? ? "Please play a game first!" : generate_scoreboard
+    tic_tac_toe.player1.name.nil? ? "Please play a game first!" : generate_scoreboard
   end
 
   def generate_scoreboard
