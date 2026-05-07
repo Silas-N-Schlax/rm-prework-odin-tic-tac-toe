@@ -24,6 +24,7 @@ class Game
     check_symbols
     puts "\n#{@player1.name} is #{@player1.symbol} and #{@player2.name} is #{@player2.symbol}\n\n"
     reset
+    send_board
     play
   end
 
@@ -57,15 +58,16 @@ class Game
 
   def send_board
     puts "
-      ----------------------------------------------
-       #{@takenspaces[0]} | #{@takenspaces[1]} | #{@takenspaces[2]}     1 | 2 | 3
-      ---+---+---   ---+---+---
-       #{@takenspaces[3]} | #{@takenspaces[4]} | #{@takenspaces[5]}     4 | 5 | 6
-      ---+---+---   ---+---+---
-       #{@takenspaces[6]} | #{@takenspaces[7]} | #{@takenspaces[8]}     7 | 8 | 9
+------------------------------
+ #{@takenspaces[0]} | #{@takenspaces[1]} | #{@takenspaces[2]}     1 | 2 | 3
+---+---+---   ---+---+---
+ #{@takenspaces[3]} | #{@takenspaces[4]} | #{@takenspaces[5]}     4 | 5 | 6
+---+---+---   ---+---+---
+ #{@takenspaces[6]} | #{@takenspaces[7]} | #{@takenspaces[8]}     7 | 8 | 9
 
-      #{@player1.name} is #{@player1.symbol} | #{@player2.name} is #{@player2.symbol}
-      ----------------------------------------------"
+#{@player1.name} is #{@player1.symbol} | #{@player2.name} is #{@player2.symbol}
+------------------------------
+"
   end
 
   def user_input(msg = " please enter where you want to go... (1-9)")
